@@ -27,7 +27,7 @@ class DPFlowCoordinator: NSObject {
     private var completionHandler: DPFlowCoordinatorCompletionHandler?
     
     /// 关联对象
-    fileprivate lazy var associatedObjects = Dictionary<String, Any>()
+    private lazy var associatedObjects = Dictionary<String, Any>()
     
     
     /// 初始化方法，指定父流程协调器，默认为nil
