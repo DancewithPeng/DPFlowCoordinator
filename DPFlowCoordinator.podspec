@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DPFlowCoordinator"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "流程协调器"
 
   # This description is used to generate tags and improve search results.
@@ -73,6 +73,9 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
+
+  # ――― Language ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  s.swift_version  = "4.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
