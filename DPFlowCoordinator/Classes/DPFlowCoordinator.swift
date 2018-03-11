@@ -10,18 +10,18 @@ import UIKit
 
 
 /// 流程协调器完成处理
-typealias DPFlowCoordinatorCompletionHandler = (_ finished: Bool, _ userInfo: Any?, _ error: Error?) -> (Void)
+public typealias DPFlowCoordinatorCompletionHandler = (_ finished: Bool, _ userInfo: Any?, _ error: Error?) -> (Void)
 
 
 /// 流程协调器，用于处理业务流程
 /// 此为基类，不应直接调用此类，而应该子类化，在子类处理相关业务逻辑
-class DPFlowCoordinator: NSObject {
+open class DPFlowCoordinator: NSObject {
     
     /// 子流程协调器
-    lazy var childFlowCoordinators = Array<DPFlowCoordinator>()
+    public lazy var childFlowCoordinators = Array<DPFlowCoordinator>()
     
     /// 父流程协调器
-    weak var parentFlowCoordinator: DPFlowCoordinator?
+    public weak var parentFlowCoordinator: DPFlowCoordinator?
     
     /// 流程完成的处理
     private var completionHandler: DPFlowCoordinatorCompletionHandler?
@@ -33,7 +33,7 @@ class DPFlowCoordinator: NSObject {
     /// 初始化方法，指定父流程协调器，默认为nil
     ///
     /// - Parameter parentFlowCoordinator: 父流程协调器
-    init(parentFlowCoordinator: DPFlowCoordinator? = nil) {
+    public init(parentFlowCoordinator: DPFlowCoordinator? = nil) {
         super.init()
         
         parentFlowCoordinator?.addChildFlowCoordinator(self)
@@ -43,7 +43,7 @@ class DPFlowCoordinator: NSObject {
     /// 添加子流程协调器
     ///
     /// - Parameter childCoordinator: 子协调器
-    func addChildFlowCoordinator(_ childFlowCoordinator: DPFlowCoordinator) {
+    public func addChildFlowCoordinator(_ childFlowCoordinator: DPFlowCoordinator) {
         if childFlowCoordinators.contains(childFlowCoordinator) == false {
             childFlowCoordinator.parentFlowCoordinator = self
             childFlowCoordinators.append(childFlowCoordinator)
@@ -54,7 +54,7 @@ class DPFlowCoordinator: NSObject {
     /// 移除子流程协调器
     ///
     /// - Parameter childCoordinator: 子协调器
-    func removeChildFlowCoordinator(_ childFlowCoordinator: DPFlowCoordinator) {
+    public func removeChildFlowCoordinator(_ childFlowCoordinator: DPFlowCoordinator) {
         if let index = childFlowCoordinators.index(of: childFlowCoordinator) {
             childFlowCoordinator.parentFlowCoordinator = nil
             childFlowCoordinators.remove(at: index)
@@ -66,7 +66,7 @@ class DPFlowCoordinator: NSObject {
     /// 如果子类重写此方法，应当调用 `super.start(completion: completion)`
     ///
     /// - Parameter completion: 流程完成后的处理，默认为nil
-    func start(completion: DPFlowCoordinatorCompletionHandler? = nil) {
+    open func start(completion: DPFlowCoordinatorCompletionHandler? = nil) {
         completionHandler = completion
     }
     
@@ -75,7 +75,7 @@ class DPFlowCoordinator: NSObject {
     /// 如果子类重写此方法，应当调用 `super.cancel(error: error)`
     ///
     /// - Parameter error: 取消的错误信息，默认为nil
-    func cancel(error: Error? = nil) {
+    open func cancel(error: Error? = nil) {
         completionHandler?(false, nil, error)
         complete()
     }
@@ -85,7 +85,7 @@ class DPFlowCoordinator: NSObject {
     /// 如果子类重写此方法，应当调用 `super.finish(userInfo: userInfo)`
     ///
     /// - Parameter userInfo: 完成时需要附带的用户信息
-    func finish(userInfo: Any? = nil) {
+    open func finish(userInfo: Any? = nil) {
         completionHandler?(true, userInfo, nil)
         complete()
     }
@@ -100,10 +100,10 @@ class DPFlowCoordinator: NSObject {
 
 
 // MARK: - DPFlowCoordinator UIKit扩展
-extension DPFlowCoordinator {
+public extension DPFlowCoordinator {
     
     /// 基础视图控制器，流程协调器是基于此视图控制器开始的
-    var baseViewController: UIViewController? {
+    public var baseViewController: UIViewController? {
         if let baseVC = self.associatedObjects["baseViewController"] as? UIViewController {
             return baseVC
         }
@@ -111,7 +111,7 @@ extension DPFlowCoordinator {
     }
     
     /// 基于的导航控制器，如果baseViewController是UINavigationController，则返回对应的导航控制器，反之则返回nil
-    var navigationController: UINavigationController? {
+    public var navigationController: UINavigationController? {
         if let nav = self.baseViewController as? UINavigationController {
             return nav
         }
@@ -119,7 +119,7 @@ extension DPFlowCoordinator {
     }
     
     /// 基于的分栏控制器，如果baseViewController是UITabBarController，则返回对应的分栏控制器，反之则返回nil
-    var tabBarController: UITabBarController? {
+    public var tabBarController: UITabBarController? {
         if let tab = self.baseViewController as? UITabBarController {
             return tab
         }
@@ -132,7 +132,7 @@ extension DPFlowCoordinator {
     /// - Parameters:
     ///   - parentFlowCoordinator: 父流程协调器
     ///   - baseViewController: 基础视图控制器
-    convenience init(parentFlowCoordinator: DPFlowCoordinator? = nil, baseViewController: UIViewController) {
+    public convenience init(parentFlowCoordinator: DPFlowCoordinator? = nil, baseViewController: UIViewController) {
         self.init(parentFlowCoordinator: parentFlowCoordinator)
         
         self.associatedObjects["baseViewController"] = baseViewController
