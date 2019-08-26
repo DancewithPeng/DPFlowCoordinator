@@ -60,3 +60,6 @@ class MainViewController: UIViewController {
 ## 参考连接
 - [Krzysztof Zabłocki的中文版文章](https://academy.realm.io/cn/posts/krzysztof-zablocki-mDevCamp-ios-architecture-mvvm-mvc-viper/)
 - [Krzysztof Zabłocki的英文版文章](https://academy.realm.io/posts/krzysztof-zablocki-mDevCamp-ios-architecture-mvvm-mvc-viper/)
+
+## LICENSE 
+DPFlowCoordinator is released under the MIT license. See [LICENSE](LICENSE) for details.
