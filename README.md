@@ -4,7 +4,7 @@
 ## 安装
 使用`CocoaPods`
 ```
-pod 'DPFlowCoordinator', '~> 2.0.0'
+pod 'DPFlowCoordinator', '~> 2.1.0'
 ```
 
 ## 使用
@@ -12,7 +12,7 @@ pod 'DPFlowCoordinator', '~> 2.0.0'
 ```swift
 import DPFlowCoordinator
 
-class LoginFlowCoordinator: FlowCoordinator<User> {
+class LoginFlowCoordinator: FlowCoordinator<User, Error> {
 
     override func start(in viewController: UIViewController?, completion: CompletionHandler?) {
         super.start(in: viewController, completion: completion)
@@ -45,10 +45,12 @@ class MainViewController: UIViewController {
 
         LoginFlowCoordinator().start(in: self) { (result) -> (Void) in
             switch result {
-            case let .finished(user):
-                // 流程成功处理逻辑            
-            case let .canceled(error):
-                // 流程取消处理逻辑
+            case .cancel:
+                print("取消登录")
+            case let .finish(userInfo):
+                print("登录成功:\(String(describing: userInfo))")
+            case let .failure(error):
+                print("登录失败\(String(describing: error))")
             }
         }
     }    
