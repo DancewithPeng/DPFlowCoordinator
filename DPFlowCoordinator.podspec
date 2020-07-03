@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'DPFlowCoordinator'
-  s.version = '2.0'
+  s.version = '2.1'
   s.license = 'MIT'
   s.summary = '流程协调器，用于分离业务流程代码'
   s.homepage = 'http://www.dpdev.cn'
@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   #s.watchos.deployment_target = '2.0'
 
   s.source_files = 'DPFlowCoordinator/Classes/*.swift'
-  s.swift_version  = '5.0'
+  s.swift_version  = '5.2'
 end
