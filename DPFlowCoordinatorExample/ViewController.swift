@@ -19,12 +19,12 @@ class ViewController: UIViewController {
         let loginFlow = LoginFlowCoordinator()
         loginFlow.start(in: self) { (result) -> (Void) in
             switch result {
-            case .cancel:
-                print("取消登录")
-            case let .finish(userInfo):
-                print("登录成功:\(String(describing: userInfo))")
-            case let .failure(error):
-                print("登录失败\(String(describing: error))")
+            case .skip:
+                print("跳过")
+            case let .success(user):
+                print("登录成功:\(user)")
+            case .failure:
+                print("登录失败")
             }
         }
     }
@@ -32,12 +32,10 @@ class ViewController: UIViewController {
     @IBAction func registerFlowButtonDidClick(_ sender: Any) {
         RegisterFlowCoordinator().start(in: self) { (result) -> (Void) in
             switch result {
-            case let .finish(userInfo):
-                print("注册成功\(String(describing: userInfo))")
+            case let .success(info):
+                print("注册成功\(info)")
             case let .failure(error):
-                print("注册失败\(String(describing: error))")
-            case .cancel:
-                print("取消注册")
+                print("注册失败\(error)")
             }
         }
     }

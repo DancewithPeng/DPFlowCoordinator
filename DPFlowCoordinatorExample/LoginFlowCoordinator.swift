@@ -11,7 +11,7 @@ import DPFlowCoordinator
 
 
 /// 登录流程
-class LoginFlowCoordinator: FlowCoordinator<String, Swift.Error> {
+class LoginFlowCoordinator: FlowCoordinator<LoginFlowCoordinator.Result> {
     
     override func start(in viewController: UIViewController?, completion: CompletionHandler?) {
         super.start(in: viewController, completion: completion)
@@ -36,12 +36,13 @@ class LoginFlowCoordinator: FlowCoordinator<String, Swift.Error> {
 extension LoginFlowCoordinator: LoginViewControllerDelegate {
     
     func loginViewController(_ viewController: LoginViewController, didClickCancelButton button: UIButton) {
-        cancel()
+        complete(.skip)
         viewController.dismiss(animated: true, completion: nil)
     }
     
     func loginViewController(_ viewController: LoginViewController, didClickFinishButton button: UIButton) {
-        finish("张三")
+//        finish("张三")
+        complete(.success("张三"))
         viewController.dismiss(animated: true, completion: nil)
     }
     
@@ -49,13 +50,20 @@ extension LoginFlowCoordinator: LoginViewControllerDelegate {
         
         RegisterFlowCoordinator().start(in: viewController) { (result) -> (Void) in
             switch result {
-            case .cancel:
-                print("取消注册")
+            case let .success(info):
+                print("注册成功\(info)")
             case let .failure(error):
-                print("注册错误: \(error)")
-            case let .finish(userInfo):
-                print("注册成功\(userInfo)")
+                print("注册失败\(error)")
             }
         }
+    }
+}
+
+extension LoginFlowCoordinator {
+    
+    enum Result {
+        case skip
+        case failure
+        case success(String)
     }
 }

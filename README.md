@@ -4,15 +4,16 @@
 ## 安装
 使用`CocoaPods`
 ```
-pod 'DPFlowCoordinator', '~> 2.1.0'
+pod 'DPFlowCoordinator', '~> 2.2.0'
 ```
 
 ## 使用
-一般的使用方式是建立`FlowCoordinator`子类来处理业务流程，子类需要指定流程成功返回的信息，通过父类的范型来指定(下面例子中的`<User>`)
+一般的使用方式是建立`FlowCoordinator`子类来处理业务流程，子类需要指定流程成功返回的结果，通过父类的范型来指定(下面例子中的`Result`)
+
 ```swift
 import DPFlowCoordinator
 
-class LoginFlowCoordinator: FlowCoordinator<User, Error> {
+class LoginFlowCoordinator: FlowCoordinator<Result> {
 
     override func start(in viewController: UIViewController?, completion: CompletionHandler?) {
         super.start(in: viewController, completion: completion)
@@ -21,18 +22,30 @@ class LoginFlowCoordinator: FlowCoordinator<User, Error> {
     }
 
     func doSomething() {
-        // ⚠️️️️️️⚠️⚠️ 在业务流程完成后，需要调用`cancel()`或`finished()`方法，来结束流程，否则`FlowCoordinator`生命周期不会完结，并且内存不会被释放
-
-        // `finish()`方法可以返回必要的信息
-        // finish(user) 
-
-        // `cancel()`方法可以返回必要的错误信息
-        // cancel(error)
+        // ⚠️️️️️️⚠️⚠️ 在业务流程完成后，需要调用`complete()`方法，来结束流程，否则`FlowCoordinator`生命周期不会完结，并且内存不会被释放
+      	// 
+      	complete(.skip)
     }
 }
 ```
 
+定义`Result`每个流程可以定义自己的`Result`
+
+```swift
+extension LoginFlowCoordinator {
+    
+    enum Result {
+        case skip
+        case failure(Error)
+        case success(User)
+    }
+}
+```
+
+
+
 实现好了业务流程之后，在`ViewController`中调用业务流程
+
 ```swift
 class MainViewController: UIViewController {
 
@@ -45,9 +58,9 @@ class MainViewController: UIViewController {
 
         LoginFlowCoordinator().start(in: self) { (result) -> (Void) in
             switch result {
-            case .cancel:
+            case .skip:
                 print("取消登录")
-            case let .finish(userInfo):
+            case let .success(userInfo):
                 print("登录成功:\(String(describing: userInfo))")
             case let .failure(error):
                 print("登录失败\(String(describing: error))")

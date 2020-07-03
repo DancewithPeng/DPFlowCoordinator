@@ -11,7 +11,7 @@ import UIKit
 /// 流程协调器，用于处理业务流程
 /// 
 /// 此为基类，不应直接调用此类，而应该子类化，在子类处理相关业务逻辑
-open class FlowCoordinator<UserInfo, Error: Swift.Error> {
+open class FlowCoordinator<Result> {
     
     /// 流程完成的处理
     private var completionHandler: CompletionHandler?
@@ -36,30 +36,12 @@ open class FlowCoordinator<UserInfo, Error: Swift.Error> {
         FlowCoordinatorManager.shared.addFlowCoordinator(self, for: identifier)
     }
     
-    /// 取消流程
-    /// 如果子类重写此方法，应当调用 `super.cancel()`
-    ///
-    /// - Parameter error: 取消的错误信息，默认为nil
-    open func cancel() {
-        completionHandler?(.cancel)
-        clearUp()
-    }
-    
-    /// 使流程失败
-    ///
-    /// 如果子类重写此方法，应当调用 `super.fail(_:)`
-    /// - Parameter error: 对应的错误信息
-    open func fail(_ error: Error) {
-        completionHandler?(.failure(error))
-        clearUp()
-    }
-    
     /// 完成流程
-    /// 如果子类重写此方法，应当调用 `super.finish(_:)`
     ///
-    /// - Parameter userInfo: 完成时需要携带的用户信息
-    open func finish(_ userInfo: UserInfo) {
-        completionHandler?(.finish(userInfo))
+    /// 如果子类重新此方法，应当调用`super.complete(_:)`
+    /// - Parameter result: 结果
+    open func complete(_ result: Result) {
+        completionHandler?(result)
         clearUp()
     }
     
@@ -71,7 +53,7 @@ open class FlowCoordinator<UserInfo, Error: Swift.Error> {
 }
 
 // MARK: - Hashable
-extension FlowCoordinator: Hashable where UserInfo: Any {
+extension FlowCoordinator: Hashable where Result: Any {
     
     public static func == (lhs: FlowCoordinator, rhs: FlowCoordinator) -> Bool {
         return lhs.hashValue == rhs.hashValue
@@ -107,15 +89,5 @@ public extension FlowCoordinator {
 public extension FlowCoordinator {
     
     /// 流程协调器完成处理
-    typealias CompletionHandler = (Result) -> (Void)
-    
-    /// 结果
-    enum Result {
-        /// 取消
-        case cancel
-        /// 失败
-        case failure(Error)
-        /// 完成
-        case finish(UserInfo)
-    }
+    typealias CompletionHandler = (Result) -> Void
 }

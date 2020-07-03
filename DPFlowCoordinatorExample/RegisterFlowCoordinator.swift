@@ -10,7 +10,7 @@ import Foundation
 import DPFlowCoordinator
 
 /// 注册流程
-class RegisterFlowCoordinator: FlowCoordinator<[String: Any], RegisterFlowCoordinator.Error> {
+class RegisterFlowCoordinator: FlowCoordinator<RegisterFlowCoordinator.Result> {
     
     override func start(in viewController: UIViewController?, completion: CompletionHandler?) {
         super.start(in: viewController, completion: completion)
@@ -25,10 +25,10 @@ class RegisterFlowCoordinator: FlowCoordinator<[String: Any], RegisterFlowCoordi
         registerPage.completionHandler = { [weak self] (text) in
             if text == nil {
                 self?.viewController?.dismiss(animated: true, completion: nil)
-                self?.fail(.wrongInput)
+                self?.complete(.failure(.wrongInput))
             } else {
                 self?.viewController?.dismiss(animated: true, completion: nil)
-                self?.finish(["1234": 123])
+                self?.complete(.success(["1234": 123]))
             }
         }
         
@@ -44,6 +44,11 @@ extension RegisterFlowCoordinator {
     
     enum Error: Swift.Error {
         case wrongInput
+    }
+    
+    enum Result {
+        case success([String: Any])
+        case failure(Error)
     }
 }
 

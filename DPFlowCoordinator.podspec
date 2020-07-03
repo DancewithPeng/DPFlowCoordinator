@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'DPFlowCoordinator'
-  s.version = '2.1'
+  s.version = '2.2'
   s.license = 'MIT'
   s.summary = '流程协调器，用于分离业务流程代码'
   s.homepage = 'http://www.dpdev.cn'
