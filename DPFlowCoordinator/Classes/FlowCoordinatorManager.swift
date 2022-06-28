@@ -15,7 +15,7 @@ class FlowCoordinatorManager {
     static let shared = FlowCoordinatorManager()
     
     /// 协调器数组
-    private lazy var coordinators = [String: Any]()
+    private lazy var coordinators = [ObjectIdentifier: Any]()
     
     /// 单例限制
     private init() {}
@@ -23,14 +23,14 @@ class FlowCoordinatorManager {
     /// 添加流程协调器
     ///
     /// - Parameter flowCoordinator: 流程协调器
-    func addFlowCoordinator(_ flowCoordinator: Any, for indentifier: String) {
+    func addFlowCoordinator(_ flowCoordinator: Any, for indentifier: ObjectIdentifier) {
         coordinators[indentifier] = flowCoordinator
     }
     
     /// 移除流程协调器
     ///
     /// - Parameter flowCoordinator: 流程协调器
-    func removeFlowCoordinator(for indentifier: String) {
+    func removeFlowCoordinator(for indentifier: ObjectIdentifier) {
         coordinators.removeValue(forKey: indentifier)
     }
 }

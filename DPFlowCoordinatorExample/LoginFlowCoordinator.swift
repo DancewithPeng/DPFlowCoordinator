@@ -24,7 +24,7 @@ class LoginFlowCoordinator: FlowCoordinator<LoginFlowCoordinator.Result> {
         }
         
         loginPage.delegate = self
-        viewController?.present(loginPage, animated: true, completion: nil)
+        baseViewController?.present(loginPage, animated: true, completion: nil)
     }
     
     deinit {

@@ -24,15 +24,15 @@ class RegisterFlowCoordinator: FlowCoordinator<RegisterFlowCoordinator.Result> {
         
         registerPage.completionHandler = { [weak self] (text) in
             if text == nil {
-                self?.viewController?.dismiss(animated: true, completion: nil)
+                self?.baseViewController?.dismiss(animated: true, completion: nil)
                 self?.complete(.failure(.wrongInput))
             } else {
-                self?.viewController?.dismiss(animated: true, completion: nil)
+                self?.baseViewController?.dismiss(animated: true, completion: nil)
                 self?.complete(.success(["1234": 123]))
             }
         }
         
-        viewController?.present(registerPage, animated: true, completion: nil)
+        baseViewController?.present(registerPage, animated: true, completion: nil)
     }
     
     deinit {

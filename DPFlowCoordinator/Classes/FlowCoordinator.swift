@@ -13,24 +13,31 @@ import UIKit
 /// 此为基类，不应直接调用此类，而应该子类化，在子类处理相关业务逻辑
 open class FlowCoordinator<Result> {
     
+    // MARK: - Properties
+    
     /// 流程完成的处理
     private var completionHandler: CompletionHandler?
     
     /// 标识符
-    private lazy var identifier = "\(Unmanaged.passUnretained(self).toOpaque())"
+    private lazy var identifier = ObjectIdentifier(self)
     
     /// 对应的`UIViewController`
-    public weak var viewController: UIViewController?
+    public weak var baseViewController: UIViewController?
+    
+    
+    // MARK: - Life Cycle Methods
         
     /// 初始化方法
     public init() {}
+    
+    // MARK: - Hooksll
     
     /// 开始流程，子类应该重写此方法以开始处理流程
     /// 如果子类重写此方法，应当调用 `super.start(in:completion:)`
     ///
     /// - Parameter completion: 流程完成后的处理，默认为nil
-    open func start(in viewController: UIViewController?, completion: CompletionHandler?) {
-        self.viewController = viewController
+    open func start(in baseViewController: UIViewController?, completion: CompletionHandler?) {
+        self.baseViewController = baseViewController
         completionHandler = completion
         
         FlowCoordinatorManager.shared.addFlowCoordinator(self, for: identifier)
@@ -45,22 +52,12 @@ open class FlowCoordinator<Result> {
         clearUp()
     }
     
+    // MARK: - Helper Methods
+    
     /// 清除操作
     private func clearUp() {
         completionHandler = nil
         FlowCoordinatorManager.shared.removeFlowCoordinator(for: identifier)
-    }
-}
-
-// MARK: - Hashable
-extension FlowCoordinator: Hashable where Result: Any {
-    
-    public static func == (lhs: FlowCoordinator, rhs: FlowCoordinator) -> Bool {
-        return lhs.hashValue == rhs.hashValue
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(identifier)
     }
 }
 
@@ -69,18 +66,18 @@ public extension FlowCoordinator {
     
     /// 基于的导航控制器，如果baseViewController是UINavigationController，则返回对应的导航控制器，反之则返回nil
     var navigationController: UINavigationController? {
-        if let nav = viewController as? UINavigationController {
+        if let nav = baseViewController as? UINavigationController {
             return nav
         }
-        return viewController?.navigationController
+        return baseViewController?.navigationController
     }
     
     /// 基于的分栏控制器，如果baseViewController是UITabBarController，则返回对应的分栏控制器，反之则返回nil
     var tabBarController: UITabBarController? {
-        if let tab = viewController as? UITabBarController {
+        if let tab = baseViewController as? UITabBarController {
             return tab
         }
-        return viewController?.tabBarController
+        return baseViewController?.tabBarController
     }
 }
 
