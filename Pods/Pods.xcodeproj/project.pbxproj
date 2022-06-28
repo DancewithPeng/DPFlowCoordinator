@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F3331A9D95B1E92B4717C0CA7B367D3 /* DPFlowCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5923684F6C34812C985E9705162C0CEC /* DPFlowCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E00F4F5D81362539BC94A92BE7CD68 /* FlowCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87411BF0F1AE36F8D18CAFF85DBEBDC0 /* FlowCoordinatorType.swift */; };
+		49B99527E30AF5C1ADF618FAF3654CD3 /* Pods-DPFlowCoordinatorExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C656B55863D7C0EA0EA40BB93753884 /* Pods-DPFlowCoordinatorExample-dummy.m */; };
+		4BF690592792B193FE2D58013048A27D /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251284989F5E072E3A5F50BD5EABBE3 /* FlowCoordinator.swift */; };
+		68010E83F5ABEB9066883E13BFF9A022 /* DPFlowCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3410C0798EF9E787B00893F44F7231 /* DPFlowCoordinator-dummy.m */; };
+		805D682A28023A39A8C4973C68A0D25F /* FCFlowCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F08AFAD49A88DAF45519494076C103 /* FCFlowCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B11578D1C527E9FA679BB6F3D95813 /* Pods-DPFlowCoordinatorObjCExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A78EA8A249B039B155480C558938DD /* Pods-DPFlowCoordinatorObjCExample-dummy.m */; };
+		96AAD2E7E703EB941C4241D3C7792306 /* FCFlowCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AE61DC40C65ABC14A938967C56ECD4 /* FCFlowCoordinator.m */; };
+		AE7900950A9A0D51720DC991B89BAE1F /* FlowCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973B0A240BFCC04F4B33244C2A4F53FD /* FlowCoordinatorManager.swift */; };
+		BBA9D0477E52140700FC91168282B85C /* DPFlowCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D2F58984BF750B3E4CBDFC43F145748 /* DPFlowCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC93BC56764A2372FADECB620D65CC26 /* Pods-DPFlowCoordinatorExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1783D28F1726A48F74AF91A49FFEF4DD /* Pods-DPFlowCoordinatorExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEA70949FED6305607B055E5738B07A6 /* Pods-DPFlowCoordinatorObjCExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0824A238CAB4A995A2BE1523349A5B /* Pods-DPFlowCoordinatorObjCExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C78B52EEF01605799D14E6E13C7C293C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E7DA535C004FE72B2EEC3D67616CC23F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E8C892459F07880BA0D15CB53FCA4B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E915DF93CBC833314ED2D5942DAA48B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261B86A6953A3283DC6B0E926A684B10;
+			remoteInfo = DPFlowCoordinator;
+		};
+		C905A3506B1E695FA0DFE83ACA5A2024 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261B86A6953A3283DC6B0E926A684B10;
+			remoteInfo = DPFlowCoordinator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03A78EA8A249B039B155480C558938DD /* Pods-DPFlowCoordinatorObjCExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DPFlowCoordinatorObjCExample-dummy.m"; sourceTree = "<group>"; };
+		07BEF0D87788BE61E91EE133E3752924 /* Pods_DPFlowCoordinatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DPFlowCoordinatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0824A238CAB4A995A2BE1523349A5B /* Pods-DPFlowCoordinatorObjCExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DPFlowCoordinatorObjCExample-umbrella.h"; sourceTree = "<group>"; };
+		1783D28F1726A48F74AF91A49FFEF4DD /* Pods-DPFlowCoordinatorExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DPFlowCoordinatorExample-umbrella.h"; sourceTree = "<group>"; };
+		24A0A247C42106DA34FB20A2AB21F3B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3693EB4C7CDB0935E5F972A2A2BC5E4B /* Pods-DPFlowCoordinatorExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DPFlowCoordinatorExample.modulemap"; sourceTree = "<group>"; };
+		3ED1B7114ABCE766AE1F503D61ED31DA /* DPFlowCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DPFlowCoordinator-prefix.pch"; sourceTree = "<group>"; };
+		48FF97201BD8C0063F56846754DBB34F /* Pods-DPFlowCoordinatorObjCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DPFlowCoordinatorObjCExample.release.xcconfig"; sourceTree = "<group>"; };
+		4C9E2B687889865BCE6B284AFD184080 /* Pods-DPFlowCoordinatorExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DPFlowCoordinatorExample-Info.plist"; sourceTree = "<group>"; };
+		4E31FED1759340E069753CDAC03A2C7B /* DPFlowCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DPFlowCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503B9CB9FEF7541B5AE2E09B3E2258D0 /* Pods-DPFlowCoordinatorObjCExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DPFlowCoordinatorObjCExample.modulemap"; sourceTree = "<group>"; };
+		5251284989F5E072E3A5F50BD5EABBE3 /* FlowCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		5923684F6C34812C985E9705162C0CEC /* DPFlowCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DPFlowCoordinator.h; path = DPFlowCoordinator/DPFlowCoordinator.h; sourceTree = "<group>"; };
+		66D94347707E6ECC6F0307DFB77EBF56 /* Pods-DPFlowCoordinatorObjCExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DPFlowCoordinatorObjCExample-Info.plist"; sourceTree = "<group>"; };
+		6BC59A0CFB2F608F81699BC9659A8F1B /* Pods-DPFlowCoordinatorObjCExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DPFlowCoordinatorObjCExample-frameworks.sh"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7555B37B8DF5DDCF55A35D7061B831DA /* Pods-DPFlowCoordinatorObjCExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DPFlowCoordinatorObjCExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		757EB459C75CB9E5582C73884AC409EF /* DPFlowCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DPFlowCoordinator.modulemap; sourceTree = "<group>"; };
+		759A6D95C78D8584ED82FEE1E8F628CF /* Pods-DPFlowCoordinatorExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DPFlowCoordinatorExample-frameworks.sh"; sourceTree = "<group>"; };
+		778EE517ED65E7B341F618EDFACE20C2 /* Pods-DPFlowCoordinatorExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DPFlowCoordinatorExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		824F1EBE468C4FE983CF6A2EBA67D3E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		87411BF0F1AE36F8D18CAFF85DBEBDC0 /* FlowCoordinatorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorType.swift; sourceTree = "<group>"; };
+		8A5DA4D22AF898FA042504A41EA9A40D /* Pods-DPFlowCoordinatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DPFlowCoordinatorExample.debug.xcconfig"; sourceTree = "<group>"; };
+		8C656B55863D7C0EA0EA40BB93753884 /* Pods-DPFlowCoordinatorExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DPFlowCoordinatorExample-dummy.m"; sourceTree = "<group>"; };
+		8D2F58984BF750B3E4CBDFC43F145748 /* DPFlowCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DPFlowCoordinator-umbrella.h"; sourceTree = "<group>"; };
+		95841BC0AF4F26368140B8AC6F494D88 /* Pods-DPFlowCoordinatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DPFlowCoordinatorExample.release.xcconfig"; sourceTree = "<group>"; };
+		973B0A240BFCC04F4B33244C2A4F53FD /* FlowCoordinatorManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorManager.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2AE61DC40C65ABC14A938967C56ECD4 /* FCFlowCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FCFlowCoordinator.m; sourceTree = "<group>"; };
+		B6B3ADB0E076144693A4C400A9746A3A /* DPFlowCoordinator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DPFlowCoordinator.release.xcconfig; sourceTree = "<group>"; };
+		C02BF5DC8B86C63F770375B8DC161BEB /* DPFlowCoordinator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DPFlowCoordinator-Info.plist"; sourceTree = "<group>"; };
+		C4429F763769AC98CEA73CECFBA30E8E /* DPFlowCoordinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DPFlowCoordinator.debug.xcconfig; sourceTree = "<group>"; };
+		C7F08AFAD49A88DAF45519494076C103 /* FCFlowCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FCFlowCoordinator.h; sourceTree = "<group>"; };
+		DD63DE56DC32E0BA49D563CBE670D464 /* Pods-DPFlowCoordinatorObjCExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DPFlowCoordinatorObjCExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC3097FA66CFA6C20A7150FF80D3971B /* Pods_DPFlowCoordinatorObjCExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DPFlowCoordinatorObjCExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA5FC7935F63E007DEB58DE6F7D631B /* DPFlowCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DPFlowCoordinator.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4ECF33C03FB2F9B6EA7ED05B4152E26 /* Pods-DPFlowCoordinatorExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DPFlowCoordinatorExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		F7164E21FF6A8E58AF5EA07D8BA1D7C3 /* Pods-DPFlowCoordinatorObjCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DPFlowCoordinatorObjCExample.debug.xcconfig"; sourceTree = "<group>"; };
+		FA3410C0798EF9E787B00893F44F7231 /* DPFlowCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DPFlowCoordinator-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		602E8A534ABE42EAB49FEFAE7138E98D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7DA535C004FE72B2EEC3D67616CC23F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BC4DFF743E79B7978BFB67320081EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B52EEF01605799D14E6E13C7C293C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A635CB09AC0E9C2348BF721288B235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C892459F07880BA0D15CB53FCA4B25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C86267493F66BC32874E79C65A5449 /* Pods-DPFlowCoordinatorObjCExample */ = {
+			isa = PBXGroup;
+			children = (
+				503B9CB9FEF7541B5AE2E09B3E2258D0 /* Pods-DPFlowCoordinatorObjCExample.modulemap */,
+				DD63DE56DC32E0BA49D563CBE670D464 /* Pods-DPFlowCoordinatorObjCExample-acknowledgements.markdown */,
+				7555B37B8DF5DDCF55A35D7061B831DA /* Pods-DPFlowCoordinatorObjCExample-acknowledgements.plist */,
+				03A78EA8A249B039B155480C558938DD /* Pods-DPFlowCoordinatorObjCExample-dummy.m */,
+				6BC59A0CFB2F608F81699BC9659A8F1B /* Pods-DPFlowCoordinatorObjCExample-frameworks.sh */,
+				66D94347707E6ECC6F0307DFB77EBF56 /* Pods-DPFlowCoordinatorObjCExample-Info.plist */,
+				0B0824A238CAB4A995A2BE1523349A5B /* Pods-DPFlowCoordinatorObjCExample-umbrella.h */,
+				F7164E21FF6A8E58AF5EA07D8BA1D7C3 /* Pods-DPFlowCoordinatorObjCExample.debug.xcconfig */,
+				48FF97201BD8C0063F56846754DBB34F /* Pods-DPFlowCoordinatorObjCExample.release.xcconfig */,
+			);
+			name = "Pods-DPFlowCoordinatorObjCExample";
+			path = "Target Support Files/Pods-DPFlowCoordinatorObjCExample";
+			sourceTree = "<group>";
+		};
+		11AFE8662851D5F59E2897C9F66948FF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				ECA5FC7935F63E007DEB58DE6F7D631B /* DPFlowCoordinator.podspec */,
+				824F1EBE468C4FE983CF6A2EBA67D3E5 /* LICENSE */,
+				24A0A247C42106DA34FB20A2AB21F3B6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		229BCCDB403EF9A18823A31F3C13634C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				757EB459C75CB9E5582C73884AC409EF /* DPFlowCoordinator.modulemap */,
+				FA3410C0798EF9E787B00893F44F7231 /* DPFlowCoordinator-dummy.m */,
+				C02BF5DC8B86C63F770375B8DC161BEB /* DPFlowCoordinator-Info.plist */,
+				3ED1B7114ABCE766AE1F503D61ED31DA /* DPFlowCoordinator-prefix.pch */,
+				8D2F58984BF750B3E4CBDFC43F145748 /* DPFlowCoordinator-umbrella.h */,
+				C4429F763769AC98CEA73CECFBA30E8E /* DPFlowCoordinator.debug.xcconfig */,
+				B6B3ADB0E076144693A4C400A9746A3A /* DPFlowCoordinator.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/DPFlowCoordinator";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7E600C9FD34B84A3EB3943CBBB7B4145 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC8729FFF7AFC30A96693F73FC73AD /* Pods-DPFlowCoordinatorExample */,
+				02C86267493F66BC32874E79C65A5449 /* Pods-DPFlowCoordinatorObjCExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		875D61C27B481ECB201961A4C9E84368 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E8AE9FD14F1EC31770E68F181EFC1B /* DPFlowCoordinator */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		920FC30A925341C9DD3CDB82D53390E2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C7F08AFAD49A88DAF45519494076C103 /* FCFlowCoordinator.h */,
+				A2AE61DC40C65ABC14A938967C56ECD4 /* FCFlowCoordinator.m */,
+				5251284989F5E072E3A5F50BD5EABBE3 /* FlowCoordinator.swift */,
+				973B0A240BFCC04F4B33244C2A4F53FD /* FlowCoordinatorManager.swift */,
+				87411BF0F1AE36F8D18CAFF85DBEBDC0 /* FlowCoordinatorType.swift */,
+			);
+			name = Sources;
+			path = DPFlowCoordinator/Sources;
+			sourceTree = "<group>";
+		};
+		97E8AE9FD14F1EC31770E68F181EFC1B /* DPFlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5923684F6C34812C985E9705162C0CEC /* DPFlowCoordinator.h */,
+				11AFE8662851D5F59E2897C9F66948FF /* Pod */,
+				920FC30A925341C9DD3CDB82D53390E2 /* Sources */,
+				229BCCDB403EF9A18823A31F3C13634C /* Support Files */,
+			);
+			name = DPFlowCoordinator;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9FCAC8FC4D8AC9C36D78736FA6E660E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E31FED1759340E069753CDAC03A2C7B /* DPFlowCoordinator.framework */,
+				07BEF0D87788BE61E91EE133E3752924 /* Pods_DPFlowCoordinatorExample.framework */,
+				EC3097FA66CFA6C20A7150FF80D3971B /* Pods_DPFlowCoordinatorObjCExample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				875D61C27B481ECB201961A4C9E84368 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9FCAC8FC4D8AC9C36D78736FA6E660E5 /* Products */,
+				7E600C9FD34B84A3EB3943CBBB7B4145 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFC8729FFF7AFC30A96693F73FC73AD /* Pods-DPFlowCoordinatorExample */ = {
+			isa = PBXGroup;
+			children = (
+				3693EB4C7CDB0935E5F972A2A2BC5E4B /* Pods-DPFlowCoordinatorExample.modulemap */,
+				778EE517ED65E7B341F618EDFACE20C2 /* Pods-DPFlowCoordinatorExample-acknowledgements.markdown */,
+				F4ECF33C03FB2F9B6EA7ED05B4152E26 /* Pods-DPFlowCoordinatorExample-acknowledgements.plist */,
+				8C656B55863D7C0EA0EA40BB93753884 /* Pods-DPFlowCoordinatorExample-dummy.m */,
+				759A6D95C78D8584ED82FEE1E8F628CF /* Pods-DPFlowCoordinatorExample-frameworks.sh */,
+				4C9E2B687889865BCE6B284AFD184080 /* Pods-DPFlowCoordinatorExample-Info.plist */,
+				1783D28F1726A48F74AF91A49FFEF4DD /* Pods-DPFlowCoordinatorExample-umbrella.h */,
+				8A5DA4D22AF898FA042504A41EA9A40D /* Pods-DPFlowCoordinatorExample.debug.xcconfig */,
+				95841BC0AF4F26368140B8AC6F494D88 /* Pods-DPFlowCoordinatorExample.release.xcconfig */,
+			);
+			name = "Pods-DPFlowCoordinatorExample";
+			path = "Target Support Files/Pods-DPFlowCoordinatorExample";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09F06B34FA9DE5B9D4C847B6811F6056 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC93BC56764A2372FADECB620D65CC26 /* Pods-DPFlowCoordinatorExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AFB5B319E32CC2A42CD03CF8C2DF5F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F3331A9D95B1E92B4717C0CA7B367D3 /* DPFlowCoordinator.h in Headers */,
+				BBA9D0477E52140700FC91168282B85C /* DPFlowCoordinator-umbrella.h in Headers */,
+				805D682A28023A39A8C4973C68A0D25F /* FCFlowCoordinator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D9DD0BDDB1AA720E446C735E0A11FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA70949FED6305607B055E5738B07A6 /* Pods-DPFlowCoordinatorObjCExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		261B86A6953A3283DC6B0E926A684B10 /* DPFlowCoordinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425334AF5B9F38C95C66D564AAA8721E /* Build configuration list for PBXNativeTarget "DPFlowCoordinator" */;
+			buildPhases = (
+				2AFB5B319E32CC2A42CD03CF8C2DF5F7 /* Headers */,
+				279FA42DAAAF761DC34020B63CC7B0D3 /* Sources */,
+				8BC4DFF743E79B7978BFB67320081EF1 /* Frameworks */,
+				9CA7A0F12B8E35AD4512A2E1FAF28F58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DPFlowCoordinator;
+			productName = DPFlowCoordinator;
+			productReference = 4E31FED1759340E069753CDAC03A2C7B /* DPFlowCoordinator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		563915A964FAC8221BAD1C93FEB2E27B /* Pods-DPFlowCoordinatorObjCExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5866B3860A7113B6DC853677D0AE3795 /* Build configuration list for PBXNativeTarget "Pods-DPFlowCoordinatorObjCExample" */;
+			buildPhases = (
+				B6D9DD0BDDB1AA720E446C735E0A11FC /* Headers */,
+				48A8D9D735E89FA37A42DD7A567F3279 /* Sources */,
+				A3A635CB09AC0E9C2348BF721288B235 /* Frameworks */,
+				8C62CD4DF87F3F3751644904952349E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CBB9937AD640AD9CEEB520D678565A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-DPFlowCoordinatorObjCExample";
+			productName = Pods_DPFlowCoordinatorObjCExample;
+			productReference = EC3097FA66CFA6C20A7150FF80D3971B /* Pods_DPFlowCoordinatorObjCExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6680495CA0D44CBEBF89AB70041B9C55 /* Pods-DPFlowCoordinatorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08468172A103ED169AE9AC87F28F7481 /* Build configuration list for PBXNativeTarget "Pods-DPFlowCoordinatorExample" */;
+			buildPhases = (
+				09F06B34FA9DE5B9D4C847B6811F6056 /* Headers */,
+				018A47EF3E8BA47EC8A0037855619B51 /* Sources */,
+				602E8A534ABE42EAB49FEFAE7138E98D /* Frameworks */,
+				4659749E4A198BF1E7410A0CCA61DCA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A528B04132DF93125980966CBBF0D9D1 /* PBXTargetDependency */,
+			);
+			name = "Pods-DPFlowCoordinatorExample";
+			productName = Pods_DPFlowCoordinatorExample;
+			productReference = 07BEF0D87788BE61E91EE133E3752924 /* Pods_DPFlowCoordinatorExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1340;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9FCAC8FC4D8AC9C36D78736FA6E660E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				261B86A6953A3283DC6B0E926A684B10 /* DPFlowCoordinator */,
+				6680495CA0D44CBEBF89AB70041B9C55 /* Pods-DPFlowCoordinatorExample */,
+				563915A964FAC8221BAD1C93FEB2E27B /* Pods-DPFlowCoordinatorObjCExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4659749E4A198BF1E7410A0CCA61DCA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C62CD4DF87F3F3751644904952349E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA7A0F12B8E35AD4512A2E1FAF28F58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		018A47EF3E8BA47EC8A0037855619B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49B99527E30AF5C1ADF618FAF3654CD3 /* Pods-DPFlowCoordinatorExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279FA42DAAAF761DC34020B63CC7B0D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68010E83F5ABEB9066883E13BFF9A022 /* DPFlowCoordinator-dummy.m in Sources */,
+				96AAD2E7E703EB941C4241D3C7792306 /* FCFlowCoordinator.m in Sources */,
+				4BF690592792B193FE2D58013048A27D /* FlowCoordinator.swift in Sources */,
+				AE7900950A9A0D51720DC991B89BAE1F /* FlowCoordinatorManager.swift in Sources */,
+				10E00F4F5D81362539BC94A92BE7CD68 /* FlowCoordinatorType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48A8D9D735E89FA37A42DD7A567F3279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B11578D1C527E9FA679BB6F3D95813 /* Pods-DPFlowCoordinatorObjCExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CBB9937AD640AD9CEEB520D678565A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DPFlowCoordinator;
+			target = 261B86A6953A3283DC6B0E926A684B10 /* DPFlowCoordinator */;
+			targetProxy = C905A3506B1E695FA0DFE83ACA5A2024 /* PBXContainerItemProxy */;
+		};
+		A528B04132DF93125980966CBBF0D9D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DPFlowCoordinator;
+			target = 261B86A6953A3283DC6B0E926A684B10 /* DPFlowCoordinator */;
+			targetProxy = 7E915DF93CBC833314ED2D5942DAA48B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BE884A281A31FB8325EBFA43B70C688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A5DA4D22AF898FA042504A41EA9A40D /* Pods-DPFlowCoordinatorExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DPFlowCoordinatorExample/Pods-DPFlowCoordinatorExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DPFlowCoordinatorExample/Pods-DPFlowCoordinatorExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		21EFD1B831618C0B5F526E8203A7F3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4429F763769AC98CEA73CECFBA30E8E /* DPFlowCoordinator.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator.modulemap";
+				PRODUCT_MODULE_NAME = DPFlowCoordinator;
+				PRODUCT_NAME = DPFlowCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		579628DF221E02F517901C99E8945346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95841BC0AF4F26368140B8AC6F494D88 /* Pods-DPFlowCoordinatorExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DPFlowCoordinatorExample/Pods-DPFlowCoordinatorExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DPFlowCoordinatorExample/Pods-DPFlowCoordinatorExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6BDCD60D8A3652BB39E3A52BCE9A3DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7164E21FF6A8E58AF5EA07D8BA1D7C3 /* Pods-DPFlowCoordinatorObjCExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DPFlowCoordinatorObjCExample/Pods-DPFlowCoordinatorObjCExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DPFlowCoordinatorObjCExample/Pods-DPFlowCoordinatorObjCExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9EC207923CDAADD889286947DCA93B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6B3ADB0E076144693A4C400A9746A3A /* DPFlowCoordinator.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DPFlowCoordinator/DPFlowCoordinator.modulemap";
+				PRODUCT_MODULE_NAME = DPFlowCoordinator;
+				PRODUCT_NAME = DPFlowCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F80BB67F7414F3EFA555A818953A6E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FF97201BD8C0063F56846754DBB34F /* Pods-DPFlowCoordinatorObjCExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DPFlowCoordinatorObjCExample/Pods-DPFlowCoordinatorObjCExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DPFlowCoordinatorObjCExample/Pods-DPFlowCoordinatorObjCExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08468172A103ED169AE9AC87F28F7481 /* Build configuration list for PBXNativeTarget "Pods-DPFlowCoordinatorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BE884A281A31FB8325EBFA43B70C688 /* Debug */,
+				579628DF221E02F517901C99E8945346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425334AF5B9F38C95C66D564AAA8721E /* Build configuration list for PBXNativeTarget "DPFlowCoordinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21EFD1B831618C0B5F526E8203A7F3DE /* Debug */,
+				9EC207923CDAADD889286947DCA93B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5866B3860A7113B6DC853677D0AE3795 /* Build configuration list for PBXNativeTarget "Pods-DPFlowCoordinatorObjCExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BDCD60D8A3652BB39E3A52BCE9A3DAF /* Debug */,
+				F80BB67F7414F3EFA555A818953A6E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

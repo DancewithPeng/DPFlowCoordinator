@@ -1,0 +1,6 @@
+framework module DPFlowCoordinator {
+  umbrella header "DPFlowCoordinator-umbrella.h"
+
+  export *
+  module * { export * }
+}

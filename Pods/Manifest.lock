@@ -1,0 +1,16 @@
+PODS:
+  - DPFlowCoordinator (3.0)
+
+DEPENDENCIES:
+  - DPFlowCoordinator (from `./`)
+
+EXTERNAL SOURCES:
+  DPFlowCoordinator:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  DPFlowCoordinator: 31ffb68c5b8640c3df2dfd24855c5aa25395cb60
+
+PODFILE CHECKSUM: 17d343b4e8291bcbcb4cde45b29809d67744b02d
+
+COCOAPODS: 1.11.3

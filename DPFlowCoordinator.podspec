@@ -15,12 +15,7 @@ Pod::Spec.new do |s|
   s.authors = { 'DancewithPeng' => 'dancewithpeng@gmail.com' }
   s.source = { :git => 'https://github.com/DancewithPeng/DPFlowCoordinator.git', :tag => s.version }
 
-  s.platform = :ios, '10.0'
-
-  #s.ios.deployment_target = '8.0'
-  #s.osx.deployment_target = '10.10'
-  #s.tvos.deployment_target = '9.0'
-  #s.watchos.deployment_target = '2.0'
+  s.platform = :ios, '13.0'
 
   s.source_files = 'DPFlowCoordinator/Sources/*.swift', 'DPFlowCoordinator/Sources/*.{h,m}', 'DPFlowCoordinator/*.h'
   s.swift_version  = '5.5'
