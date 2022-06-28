@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBAction func loginFlowButtonDidClick(_ sender: Any) {
         let loginFlow = LoginFlowCoordinator()
-        loginFlow.start(in: self) { (result) -> (Void) in
+        loginFlow.start(at: self) { (result) -> (Void) in
             switch result {
             case .skip:
                 print("跳过")
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func registerFlowButtonDidClick(_ sender: Any) {
-        RegisterFlowCoordinator().start(in: self) { (result) -> (Void) in
+        RegisterFlowCoordinator().start(at: self) { (result) -> (Void) in
             switch result {
             case let .success(info):
                 print("注册成功\(info)")

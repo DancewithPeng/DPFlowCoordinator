@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char DPFlowCoordinatorVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DPFlowCoordinator/PublicHeader.h>
 
-
+#import <DPFlowCoordinator/FCFlowCoordinator.h>

@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name = 'DPFlowCoordinator'
-  s.version = '2.2'
+  s.version = '3.0'
   s.license = 'MIT'
   s.summary = '流程协调器，用于分离业务流程代码'
-  s.homepage = 'http://www.dpdev.cn'
+  s.homepage = 'https://github.com/DancewithPeng/DPFlowCoordinator.git'
   s.authors = { 'DancewithPeng' => 'dancewithpeng@gmail.com' }
   s.source = { :git => 'https://github.com/DancewithPeng/DPFlowCoordinator.git', :tag => s.version }
 
@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   #s.tvos.deployment_target = '9.0'
   #s.watchos.deployment_target = '2.0'
 
-  s.source_files = 'DPFlowCoordinator/Classes/*.swift'
-  s.swift_version  = '5.2'
+  s.source_files = 'DPFlowCoordinator/Sources/*.swift', 'DPFlowCoordinator/Sources/*.{h,m}', 'DPFlowCoordinator/*.h'
+  s.swift_version  = '5.5'
 end

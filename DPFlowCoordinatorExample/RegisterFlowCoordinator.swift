@@ -12,8 +12,8 @@ import DPFlowCoordinator
 /// 注册流程
 class RegisterFlowCoordinator: FlowCoordinator<RegisterFlowCoordinator.Result> {
     
-    override func start(in viewController: UIViewController?, completion: CompletionHandler?) {
-        super.start(in: viewController, completion: completion)
+    override func start(at viewController: UIViewController?, completion: CompletionHandler?) {
+        super.start(at: viewController, completion: completion)
         showRegisterPage()
     }
     
@@ -25,10 +25,10 @@ class RegisterFlowCoordinator: FlowCoordinator<RegisterFlowCoordinator.Result> {
         registerPage.completionHandler = { [weak self] (text) in
             if text == nil {
                 self?.baseViewController?.dismiss(animated: true, completion: nil)
-                self?.complete(.failure(.wrongInput))
+                self?.end(with: .failure(.wrongInput))
             } else {
                 self?.baseViewController?.dismiss(animated: true, completion: nil)
-                self?.complete(.success(["1234": 123]))
+                self?.end(with: .success(["1234": 123]))
             }
         }
         

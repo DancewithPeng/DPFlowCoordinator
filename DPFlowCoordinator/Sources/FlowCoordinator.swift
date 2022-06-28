@@ -11,7 +11,7 @@ import UIKit
 /// 流程协调器，用于处理业务流程
 /// 
 /// 此为基类，不应直接调用此类，而应该子类化，在子类处理相关业务逻辑
-open class FlowCoordinator<Result> {
+open class FlowCoordinator<Result>: FlowCoordinatorType {
     
     // MARK: - Properties
     
@@ -33,21 +33,35 @@ open class FlowCoordinator<Result> {
     // MARK: - Hooksll
     
     /// 开始流程，子类应该重写此方法以开始处理流程
-    /// 如果子类重写此方法，应当调用 `super.start(in:completion:)`
+    /// 如果子类重写此方法，应当调用 `super.start(at:completion:)`
     ///
     /// - Parameter completion: 流程完成后的处理，默认为nil
-    open func start(in baseViewController: UIViewController?, completion: CompletionHandler?) {
+    open func start(at baseViewController: UIViewController?, completion: CompletionHandler?) {
         self.baseViewController = baseViewController
-        completionHandler = completion
+        self.completionHandler  = completion
         
         FlowCoordinatorManager.shared.addFlowCoordinator(self, for: identifier)
+    }
+            
+    /// 开始流程，子类不应该重写此方法，仅为支持Swift Concurrency语法
+    /// - Parameter baseViewController: 基础页面
+    /// - Returns: 返回对应的结果
+    @available(iOS 13, *)
+    public func start(at baseViewController: UIViewController?) async -> Result {
+        return await withUnsafeContinuation { continuation in
+            DispatchQueue.main.async { [weak self] in
+                self?.start(at: baseViewController) { result in
+                    continuation.resume(returning: result)
+                }
+            }
+        }
     }
     
     /// 完成流程
     ///
-    /// 如果子类重新此方法，应当调用`super.complete(_:)`
+    /// 如果子类重新此方法，应当调用`super.end(with_:)`
     /// - Parameter result: 结果
-    open func complete(_ result: Result) {
+    open func end(with result: Result) {
         completionHandler?(result)
         clearUp()
     }
@@ -60,27 +74,6 @@ open class FlowCoordinator<Result> {
         FlowCoordinatorManager.shared.removeFlowCoordinator(for: identifier)
     }
 }
-
-// MARK: - DPFlowCoordinator UIKit扩展
-public extension FlowCoordinator {
-    
-    /// 基于的导航控制器，如果baseViewController是UINavigationController，则返回对应的导航控制器，反之则返回nil
-    var navigationController: UINavigationController? {
-        if let nav = baseViewController as? UINavigationController {
-            return nav
-        }
-        return baseViewController?.navigationController
-    }
-    
-    /// 基于的分栏控制器，如果baseViewController是UITabBarController，则返回对应的分栏控制器，反之则返回nil
-    var tabBarController: UITabBarController? {
-        if let tab = baseViewController as? UITabBarController {
-            return tab
-        }
-        return baseViewController?.tabBarController
-    }
-}
-
 
 // MARK: - Types
 public extension FlowCoordinator {
